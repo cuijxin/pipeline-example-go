@@ -1,5 +1,4 @@
-FROM alpine
-WORKDIR /myapp
+FROM golang:1.11
 EXPOSE 80
-COPY ./bin/hello-server .
-ENTRYPOINT ["/myapp/hello-server"]
+COPY ./bin/hello-server /usr/local/bin
+CMD ["hello-server"]
