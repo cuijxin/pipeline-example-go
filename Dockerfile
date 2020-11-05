@@ -1,5 +1,5 @@
 FROM alpine
 WORKDIR /myapp
 EXPOSE 80
-COPY ./hello-server . 
+COPY ${MYAPP} . 
 CMD ["/myapp/hello-server"]
